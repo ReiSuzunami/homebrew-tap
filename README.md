@@ -3,7 +3,8 @@
 Homebrew packages for [sloosh](https://github.com/ReiSuzunami/sloosh).
 
 ```sh
-brew tap ReiSuzunami/tap
+brew install ReiSuzunami/tap/sloosh
 ```
 
-The `sloosh` cask will be added with the first macOS DMG release.
+Homebrew installs the `sloosh` CLI only. Download the macOS desktop app and
+DMG from [GitHub Releases](https://github.com/ReiSuzunami/sloosh/releases).
