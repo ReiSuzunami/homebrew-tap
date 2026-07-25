@@ -1,7 +1,6 @@
 class Sloosh < Formula
   desc "Persistent SSH sessions with human-approved host leases"
   homepage "https://github.com/ReiSuzunami/sloosh"
-  version "0.1.0"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
