@@ -5,27 +5,28 @@ class Sloosh < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/ReiSuzunami/sloosh/releases/download/v0.1.0/sloosh-macos-universal.tar.gz"
-      sha256 "cfdbc15e9360fae5279f2adae58d9a5b40224d3b56259fa27b5f4dbb5bf78f80"
+      url "https://github.com/ReiSuzunami/sloosh/releases/download/v0.2.0/sloosh-macos-universal.tar.gz"
+      sha256 "c32b3e68d50acd7c7cef0773ee0832b8760ba5f7d438c4a738cd141975d390ee"
     end
     on_intel do
-      url "https://github.com/ReiSuzunami/sloosh/releases/download/v0.1.0/sloosh-macos-universal.tar.gz"
-      sha256 "cfdbc15e9360fae5279f2adae58d9a5b40224d3b56259fa27b5f4dbb5bf78f80"
+      url "https://github.com/ReiSuzunami/sloosh/releases/download/v0.2.0/sloosh-macos-universal.tar.gz"
+      sha256 "c32b3e68d50acd7c7cef0773ee0832b8760ba5f7d438c4a738cd141975d390ee"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/ReiSuzunami/sloosh/releases/download/v0.1.0/sloosh-linux-x86_64-musl.tar.gz"
-      sha256 "e3782b3c31adb949b516bd6dafbdd715ff3f325ef429f198f5f7ee8fb72fe88e"
+      url "https://github.com/ReiSuzunami/sloosh/releases/download/v0.2.0/sloosh-linux-x86_64-musl.tar.gz"
+      sha256 "c4b05d3b1a68286ec729decfc6cef0ea93b3fcd405f4697cc2a7d58d93c6ef35"
     end
   end
 
   def install
-    bin.install "sloosh"
+    bin.install "sloosh", "slooshd"
   end
 
   test do
     assert_equal "sloosh #{version}", shell_output("#{bin}/sloosh --version").strip
+    assert_equal "slooshd #{version}", shell_output("#{bin}/slooshd --version").strip
   end
 end
