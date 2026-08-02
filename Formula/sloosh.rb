@@ -15,6 +15,12 @@ class Sloosh < Formula
   end
 
   on_linux do
+    depends_on arch: :x86_64
+
+    on_arm do
+      url "https://github.com/ReiSuzunami/sloosh/releases/download/v0.2.5/sloosh-linux-x86_64-musl.tar.gz"
+      sha256 "0b63a2a798cec4804415b8f1e99b494606114cb3b90c86a1c8c0b48c5b332215"
+    end
     on_intel do
       url "https://github.com/ReiSuzunami/sloosh/releases/download/v0.2.5/sloosh-linux-x86_64-musl.tar.gz"
       sha256 "0b63a2a798cec4804415b8f1e99b494606114cb3b90c86a1c8c0b48c5b332215"
