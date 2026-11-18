@@ -37,6 +37,17 @@ jobs:
           key: ${{ matrix.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ matrix.os }}-rubygems-
 
+      # Homebrew/brew#24663: cleanup tries to create libexec in root-owned /usr/local.
+      # Remove this step once the upstream cleanup fix is picked up by setup-homebrew.
+      - name: Prepare Homebrew libexec on Intel macOS
+        if: matrix.os == 'macos-15-intel'
+        shell: bash
+        run: |
+          prefix="$(brew --prefix)"
+          if [[ "$prefix" == "/usr/local" && ! -e "$prefix/libexec" && ! -L "$prefix/libexec" ]]; then
+            sudo install -d -m 0755 -o "$(id -un)" -g "$(id -gn)" "$prefix/libexec"
+          fi
+
       - run: brew test-bot --only-cleanup-before
 
       - run: brew test-bot --only-setup
