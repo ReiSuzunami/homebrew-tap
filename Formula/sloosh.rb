@@ -5,12 +5,12 @@ class Sloosh < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/ReiSuzunami/sloosh/releases/download/v0.3.3/sloosh-macos-universal.tar.gz"
-      sha256 "87f77dc239af7d1dda4ba49c6a573c434068c41d56ea9e65c281f398e9708b73"
+      url "https://github.com/ReiSuzunami/sloosh/releases/download/v0.3.4/sloosh-macos-universal.tar.gz"
+      sha256 "c440ecc3f1b42bef17923727070d503ac9b5191da6b3f6d83206ae36c9c6cbea"
     end
     on_intel do
-      url "https://github.com/ReiSuzunami/sloosh/releases/download/v0.3.3/sloosh-macos-universal.tar.gz"
-      sha256 "87f77dc239af7d1dda4ba49c6a573c434068c41d56ea9e65c281f398e9708b73"
+      url "https://github.com/ReiSuzunami/sloosh/releases/download/v0.3.4/sloosh-macos-universal.tar.gz"
+      sha256 "c440ecc3f1b42bef17923727070d503ac9b5191da6b3f6d83206ae36c9c6cbea"
     end
   end
 
@@ -18,12 +18,12 @@ class Sloosh < Formula
     depends_on arch: :x86_64
 
     on_arm do
-      url "https://github.com/ReiSuzunami/sloosh/releases/download/v0.3.3/sloosh-linux-x86_64-musl.tar.gz"
-      sha256 "ed86341e33851e57065a3257c62603e410518a35cd5a080dd818eb613e617e2c"
+      url "https://github.com/ReiSuzunami/sloosh/releases/download/v0.3.4/sloosh-linux-x86_64-musl.tar.gz"
+      sha256 "923b3d0ec12a09e79bf6b1a133f468cfcbde94d8de2f6d86126c1eb76ff2f77d"
     end
     on_intel do
-      url "https://github.com/ReiSuzunami/sloosh/releases/download/v0.3.3/sloosh-linux-x86_64-musl.tar.gz"
-      sha256 "ed86341e33851e57065a3257c62603e410518a35cd5a080dd818eb613e617e2c"
+      url "https://github.com/ReiSuzunami/sloosh/releases/download/v0.3.4/sloosh-linux-x86_64-musl.tar.gz"
+      sha256 "923b3d0ec12a09e79bf6b1a133f468cfcbde94d8de2f6d86126c1eb76ff2f77d"
     end
   end
 
